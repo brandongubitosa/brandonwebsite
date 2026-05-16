@@ -623,6 +623,115 @@ section {
 }
 
 /* ===========================
+   EXPERIENCE GROUP LABELS
+   =========================== */
+.exp-group-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 2rem;
+}
+
+.timeline-marker--sales {
+  background: #f59e0b;
+  box-shadow: 0 0 12px rgba(245,158,11,0.35);
+}
+
+.timeline-bullets {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-bullets li {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.6;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.timeline-bullets li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ===========================
+   EDUCATION
+   =========================== */
+#education {
+  background: var(--bg);
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.education-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem 2rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.education-card:hover {
+  border-color: rgba(108,99,255,0.3);
+  transform: translateY(-3px);
+}
+
+.education-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.education-school {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.education-period {
+  font-size: 0.78rem;
+  color: var(--text-3);
+}
+
+.education-degree {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.education-detail {
+  font-size: 0.85rem;
+  color: var(--text-3);
+}
+
+@media (max-width: 680px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+  .education-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+}
+
+/* ===========================
    WRITING
    =========================== */
 #writing {
